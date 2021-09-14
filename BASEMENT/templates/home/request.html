@@ -1,0 +1,38 @@
+{% extends 'home/base.html' %}
+{% block content %}
+{% load static %}
+
+<style>
+    #background_control {
+        background-image: url({% static 'BASEMENT/images/img.png' %});
+        padding-bottom: 40px;
+    }
+</style>
+
+<div id="background_control">
+<br/>
+<center>
+    <img class="container-sm" src="{% static 'BASEMENT/Icons/img_1.png' %}">
+</center>
+<br/>
+<div class="alert alert-warning alert-dismissible fade show container" role="alert">
+    <p style="font0-family: Times New Roman">Hello guys, You are able
+    to request an website from this page with a very cheap price but domain
+    name can't be provided for free. First request will be free.</p>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<center>
+    <br/>
+        <form action="" method="POST" class="container">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit" class="btn btn-secondary">
+    </form>
+</center>
+<p style="font-family: Bahnschrift;" class="container">After submitting we will be redirect to the home page.</p>
+</div>
+
+{% endblock %}
+
+

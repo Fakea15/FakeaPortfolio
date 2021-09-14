@@ -1,0 +1,152 @@
+{% extends 'home/base.html' %}
+{% block content %}
+{% load static %}
+
+<style>
+  #welcome:hover {
+    transform: rotate(360deg);
+    transition-timing-function: ease;
+    transition-duration: 1s;
+    color: #8a330e;
+  }
+  #everything:hover {
+    transform: rotate(360deg);
+    transition-timing-function: ease;
+    transition-duration: 1s;
+    color: #88a10b;
+  }
+  #experience:hover {
+    transform: rotate(360deg);
+    transition-timing-function: ease;
+    transition-duration: 1s;
+    color: #991c61;
+  }
+  #feel_free:hover {
+    transform: rotate(360deg);
+    transition-timing-function: ease;
+    transition-duration: 1s;
+    color: #4287f5;
+  }
+  #feel_free {
+    background-color: #1aa260;
+  }
+  .magic {
+    font-family: Agency FB;
+    color: #0a4045;
+    font-size: 25px;
+  }
+  #background_control {
+    background-image: url({% static 'BASEMENT/images/img_1.png' %});
+  }
+</style>
+
+<div id="background_control">
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+  <center>
+    <p class="magic" style="color: #8fdbe3;">Press or hover over the color</p>
+  </center>
+
+  <div class="container">
+    <div class="row g-2">
+      <div class="col-6" >
+        <div class="p-3 border bg-info" id="welcome" data-hover="Hello"style="font-family: Bahnschrift;">WELCOME TO MY PORTFOLIO ABOUT PAGE</div>
+      </div>
+      <div class="col-6">
+        <div class="p-3 border bg-warning" id="everything" style="font-family: Bahnschrift;">EVERYTHING YOU NEED TO KNOW IS HERE</div>
+      </div>
+      <div class="col-6">
+        <div class="p-3 border bg-danger" id="experience" style="font-family: Bahnschrift;">MY EXPERIENCE </div>
+      </div>
+      <div class="col-6">
+        <div class="p-3 border" id="feel_free" style="font-family: Bahnschrift;">FEEL FREE TO READ</div>
+      </div>
+    </div>
+  </div>
+
+  <br/>
+  <div class="card container">
+    <div class="card-body">
+      <h5 class="card-title">Biography</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Fakea Vangchhia</h6>
+      <div>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Name:
+              <p>Lalfakawma</p>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              D.O.B:
+              <p>15.Sept.2001</p>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Tribe:
+              <p>Mizo</p>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Address:
+              <p style="text-align:center;">Thenzawl, Mizoram</p>
+            </li>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Programming:
+              <p style="text-align:center;">Python</p>
+            </li>
+          </ul>
+        <br/>
+        <p><strong>Education: </strong>I started my class from CZS when I was 6, and continue from VES from the
+        the second class i.e Class-II till class-VIII I applied High School and Higher into our
+        town Thenzawl; when I was developing this website I am in a college studying Computer
+        Scienc in Government Champhai College. I thought myself how to program during the vacation
+        of class XII but on that time I was really lose in the world of programming after about one
+        year i finally chose which programming language would I concentrate on, and till today
+        I thought myself a python programming.</p>
+      </div>
+    </div>
+  </div>
+
+  <br/>
+  <div class="card text-center container">
+    <div class="card-header">
+      Me & My Web
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Tech & Logic</h5>
+      <p class="card-text" style="font-family: Candara;">From my young age I fall in love of technology and logical thing,
+      I wanted to play with some tech while my friend are playing outside like football, I grow up
+      a little and show a complex toy which they call 'Rubik's Cube' and I super love that toy and
+      study and practice everyday to solve correctly after about a month I could be finnaly complete
+      with a little bit of help from my friend 'Zoa', from that day I am more interested in logic.
+      From the end of 2019 I was able to have a computer and from that time I work a lot more hard
+      to become a good programmer, at the beginning i was so struggle just only asking myself 'Which language
+      would I study?'. But today I am now on the world of programming and understand a meme of programming</p>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Relationship</h5>
+      <p class="card-text" style="font-family: Candara;">I am the youngest of the family, I have one brother and
+      one sister, also luckily I am with my parents till today. My parents have guide me alot to became this kind
+      of person I'm not saying that they teach me how to write a computer program but they give me a support and
+      value of my skill and that thing help me a lot for my journey. I respect friendship relationship and I
+      also have a best friend which is also my girl which help me alot and always give me a support in what ever I do.</p>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">About this Web</h5>
+      <p class="card-text" style="font-family: Candara;">This project is
+      started from 07.Sept.2021. I develop this website because as a programmer website is necessary
+      so that's all why I did, Bootstrap is used in the frontend development and python django is used in the backend, this
+      website is an open source and you could be able to see all the source code from my github profile.</p>
+    </div>
+    <div class="card-footer text-muted">
+      Thanks for reading! ENJOY
+    </div>
+  </div>
+  <br/>
+</div>
+
+{% endblock %}
+
+

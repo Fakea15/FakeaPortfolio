@@ -1,0 +1,94 @@
+{% extends 'home/base.html' %}
+{% block content %}
+{% load static %}
+
+<style>
+    #contact_icon {
+        width: 200px;
+        height: auto;
+    }
+    #forms {
+        background-color: #032136;
+        border-radius: 10px;
+    }
+    #email, #facebook, #instagram, #github {
+        background-color: #dbdbdb;
+        font-family: Ariel;
+    }
+    #twitter, #phone, #linkedin {
+        background-color: #b5b5b5;
+        font-family: Ariel;
+   }
+
+</style>
+
+<div style="background-color:#021929; padding: 20px 0px;">
+<center>
+    <img id="contact_icon" src="{% static 'BASEMENT/Icons/img.png' %}">
+</center>
+<br/>
+<center>
+    <br/>
+        <form action="" method="POST" class="container">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Send Message" class="btn btn-secondary">
+    </form>
+</center>
+
+<br/>
+<div class="container">
+    <center style="font-family:Bahnschrift; font-size: 19px; color:#00cfcf;">You can also contact me from social</center>
+    <ul class="list-group">
+      <li id="email" class="list-group-item d-flex justify-content-between align-items-center">
+        Email
+        <span class="badge rounded-pill"><a style="font-size:20px;" href="mailto:fakeavangchhia@gmail.com">
+            <i class="fa fa-envelope"></i>
+        </a></span>
+      </li>
+      <li id="phone" class="list-group-item d-flex justify-content-between align-items-center">
+        Phone
+        <span class="badge rounded-pill"><a style="font-size:30px;" href="tel:+91 8787 698473">
+            <i class="fa fa-mobile"></i>
+        </a></span>
+      </li>
+        <li id="facebook" class="list-group-item d-flex justify-content-between align-items-center">
+        facebook
+        <span class="badge rounded-pill"><a style="font-size:20px;" href="https://www.facebook.com/crinoz.Mr.Fake91">
+            <i class="fa fa-facebook-f"></i>
+        </a></span>
+      </li>
+      <li id="twitter" class="list-group-item d-flex justify-content-between align-items-center">
+        twitter
+        <span class="badge rounded-pill"><a style="font-size:30px;" href="https://twitter.com/fa_keavangchhia">
+            <i class="fa fa-twitter"></i>
+        </a></span>
+      </li>
+        <li id="instagram" class="list-group-item d-flex justify-content-between align-items-center">
+        instagram
+        <span class="badge rounded-pill"><a style="font-size:20px;" href="https://www.instagram.com/fa_keavangchhia/">
+            <i class="fa fa-instagram"></i>
+        </a></span>
+      </li>
+      <li id="linkedin" class="list-group-item d-flex justify-content-between align-items-center">
+        linkIN
+        <span class="badge rounded-pill"><a style="font-size:30px;" href="https://www.linkedin.com/in/fakea-vangchhia-9029131a5/">
+            <i class="fa fa-linkedin"></i>
+        </a></span>
+      </li>
+      <li id="github" class="list-group-item d-flex justify-content-between align-items-center">
+        GitHub
+        <span class="badge rounded-pill"><a style="font-size:30px;" href="https://github.com/Fakea15">
+            <i class="fa fa-github"></i>
+        </a></span>
+      </li>
+    </ul>
+</div>
+</div>
+
+</div>
+
+{% endblock %}
+
+
+

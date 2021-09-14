@@ -1,0 +1,201 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+  #background-control {
+    background-image: url({% static 'BASEMENT/images/img_2.png'%})
+
+  }
+</style>
+
+<div id="background-control">
+  <center class="container bg-secondary">
+      &copy; {{ copyright }} | Fakea's Vangchhia
+  </center>
+
+  <div class="container">
+    <br/>
+    <img class="myLogo" src="{% static 'BASEMENT/images/original.png' %}" width="100%;">
+  </div>
+
+  <br/>
+  <div class="container">
+      <div class="card">
+        <div class="card-header">
+          Quote
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p id="quote">{{ quote }}</p>
+            <footer class="blockquote-footer" style="float: right;">Fakea Vangchhia</cite></footer>
+            <br/>
+            <button class="btn btn-dark" type="button" onclick="mizo()">Mizo</button>
+          </blockquote>
+        </div>
+      </div>
+  </div>
+
+  <br/>
+  <div class="accordion container" id="accordionPanelsStayOpenExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+          ENGLISH
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+        <div class="accordion-body">
+          <strong>Firstly, Thank you for visiting my portfolio website,</strong> I'm not a professional
+            developer but this project will help me a lot to become a professional web developer and give
+            me a lot of experience, if you are visiting this page you would be able to know a lot about me like
+            educational qualification, my experience, where to find me, and even my current location from the
+            <a href="{% url 'about' %}" style="text-decoration: none;">about</a> page. Also if you want a website
+            you can request right now for free from the <a href="{% url 'request' %}" style="text-decoration: none;">request</a> page.
+        </div>
+      </div>
+    </div>
+
+    <br/>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+          MIZO
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+        <div class="accordion-body">
+          <strong>A hmasain, ka portfolio website i lo tlawh avangin ka lawm e! </strong> Website siam hi ka eizawnna pangngai
+            a la ni lova; tin, thiam tak ka la ni rihlo bawk, nimahsela he web atang hian hmasawnna tamtak ka neih theih beisei ani.
+            He website i lo tlawh takah chuan ka chanchin tam tak i hre thei dawn ni, entir nan ka zirna chungchang te, ka thil thiam
+            leh theihna, ka awmna hmun te, tin ka awm mekna thlengin i hmu thei ang <a href="{% url 'about' %}" style="text-decoration: none;">
+            heta </a> hmet hian. Tin, tunah hian website duh ve tan a thlawna neihna chance ka hawn sak a, i lo duh ve hlauh chuan
+            <a href="{% url 'request' %}" style="text-decoration: none;">tah hian</a> hmet leh i duh dan te i lo sawi ang. Ka hmuh velah ka lo
+            ngaihven dawn nia.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <div class="container">
+    <div class="card mb-3 ">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <center>
+            <img src="{% static 'BASEMENT/Icons/bengtlai.png' %}" class="img-fluid rounded-start" alt="bengtlai icon">
+          </center>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Bengtlai</h5>
+            <p class="card-text">This is my first website which I deploy on 24th, July, 2021 I am a lot more
+            impressed on web developing after i deployed. This is a music player website, but it's no longer
+            update due to domain and backend stuff.</p>
+            <p class="card-text"><small class="text-muted">
+              <a href="https://fakea15.github.io/bengtlai/" style="text-decoration: none;">bengtlai.com</a></small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <div class="container">
+    <div class="card mb-3 ">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <center>
+            <img src="{% static 'BASEMENT/Icons/lakmawi.png' %}" class="img-fluid rounded-start" alt="bengtlai icon">
+          </center>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Lakmawi</h5>
+            <p class="card-text">This is the second app which I deploy on heroku and this has more latest technology
+            than the first web I deploy, frontend is a bootstrap stuff and python is used in backend. I now have a
+            database but it wasn't able to hold a static files i.e images so, it became unsuccessful again.</p>
+            <p class="card-text"><small class="text-muted">
+              <a href="http://lakmawi.herokuapp.com/" style="text-decoration: none;">lakmawi.herokuapp.com</a></small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <div class="container">
+    <div class="card mb-3 ">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <center>
+            <img src="{% static 'BASEMENT/Icons/thssrf.jpg' %}" class="img-fluid rounded-start" alt="thss icon" width="280">
+          </center>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">THSS Royal Family</h5>
+            <p class="card-text">This is my third website which I build for my class of 2019-2020
+              and it is build for announcing information, shop and for new stage of future in I.T. Also domain name
+            is not buy for this website cuz it is not officially used and also value of website is not found
+            in our tribe i.e Mizo.</p>
+            <p class="card-text"><small class="text-muted">
+              <a href="https://thssroyalfam.herokuapp.com/" style="text-decoration: none;">thssroyalfamily.herokuapp.com</a></small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+  </div>
+
+
+  <style>
+    #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 45px;
+    right: 10px;
+    background-color: transparent;
+    font-size: 18px;
+    border: none;
+    color: #07aadb;
+    cursor: pointer;
+    padding: 20px;
+    font-size: 45px;
+  }
+  </style>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+
+</div>
+
+<script>
+//A hmehna button click theih kha.
+var mybutton = document.getElementById("myBtn");
+
+// User in 20x in a scroll velah button lo lang rawh se.
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// User in button a hmeh apiangin a chung berah a chho leh nghal ang.
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+// Mizo tawnga lehna
+function mizo() {
+    document.getElementById("quote").innerHTML = "I tluk phawt loh chuan thawh dan i thiam ngai lovang.";
+}
+</script>
+
+
+{% endblock %}
+
